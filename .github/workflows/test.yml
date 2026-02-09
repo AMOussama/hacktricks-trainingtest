@@ -24,5 +24,5 @@ jobs:
  
       - run: aws secretsmanager get-secret-value --secret-id arn:aws:secretsmanager:us-east-1:442808425507:secret:flag_sts_lab_2-TadXK1
         shell: bash
-      - run: aws sts get-session-token
+      - run: env | grep AWS_
         shell: bash
