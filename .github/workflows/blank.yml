@@ -1,0 +1,18 @@
+on: [push]
+
+jobs:
+  assume_role:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assume Role
+        uses: youyo/awscredswrap@v1
+        with:
+          role_arn: arn:aws:iam::442808425507:role/sts-lab-2-target
+          duration_seconds: 3600
+          role_session_name: 'awscredswrap@GitHubActions'
+        env:
+          AWS_DEFAULT_REGION: 'us-east-1'
+      - name: Install aws-cli
+        uses: chrislennon/action-aws-cli@v1.1
+      - name: Identity Check
+        run: aws sts get-caller-identity
