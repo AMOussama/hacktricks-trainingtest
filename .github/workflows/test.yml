@@ -19,8 +19,8 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-region: us-east-1
-          role-to-assume: arn:aws:iam::442808425507:role/sts-lab-2-target
+          role-to-assume: arn:aws:iam::626635414792:role/whitebox-lab-2-github-actions-role
           role-session-name: OIDCSession
  
-      - run: aws secretsmanager get-secret-value --secret-id arn:aws:secretsmanager:us-east-1:442808425507:secret:flag_sts_lab_2-TadXK1
+      - run: aws secretsmanager get-secret-value --secret-id arn:aws:secretsmanager:us-east-1:626635414792:secret:flag_whitebox_lab_2_2-ldHE2F
         shell: bash
