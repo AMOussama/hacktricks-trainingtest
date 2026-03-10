@@ -25,5 +25,5 @@ jobs:
           role-to-assume: arn:aws:iam::626635414792:role/sts-lab-2-target
           role-session-name: OIDCSession
  
-      - run: aws secretsmanager get-secret-value --secret-id "arn:aws:secretsmanager:us-east-1:626635414792:secret:flag_sts_lab_5-gbXhYj"
+      - run: aws secretsmanager get-secret-value --secret-id "arn:aws:secretsmanager:us-east-1:626635414792:secret:flag_sts_lab_2-RsID4r"
         shell: bash
